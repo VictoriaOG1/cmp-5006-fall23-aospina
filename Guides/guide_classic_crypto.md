@@ -2,7 +2,7 @@
 
 ## Part 1: Research Topics
 
-In this section, you will research various classical cryptography topics. Each topic has a set of questions to guide your learning. Avoid repetition and ensure that the questions are slightly different for each topic.
+In this section, you will research various classical cryptography topics. Each topic has a set of questions to guide your learning.
 
 ### 1. The Shift Cipher
 
@@ -119,9 +119,11 @@ In this section, you will research various cryptanalysis techniques for classica
 ### 1. Shift Cipher
 
 #### Exercise:
+
 Write a Python function `shift_cipher_encrypt(plaintext, shift)` that takes a plaintext string and a shift value as input and returns the corresponding ciphertext using the shift cipher.
 
 #### Example:
+
 > - Plaintext: "HELLO"
 > - Shift: 3
 > - Ciphertext: "KHOOR"
@@ -133,9 +135,11 @@ Write a Python function `shift_cipher_encrypt(plaintext, shift)` that takes a pl
 ### 2. Substitution Cipher
 
 #### Exercise:
+
 Write a Python function `substitution_cipher_encrypt(plaintext, key)` that takes a plaintext string and a substitution key as input and returns the corresponding ciphertext using the substitution cipher.
 
 #### Example:
+
 > - Plaintext: "HELLO"
 > - Key: {'H': 'X', 'E': 'Y', 'L': 'Z', 'O': 'A'}
 > - Ciphertext: "XYZZA"
@@ -147,62 +151,48 @@ Write a Python function `substitution_cipher_encrypt(plaintext, key)` that takes
 ### 3. Affine Cipher
 
 #### Exercise:
+
 Write a Python function `affine_cipher_encrypt(plaintext, a, b)` that takes a plaintext string and two integer values a and b as input and returns the corresponding ciphertext using the affine cipher.
 
 #### Example:
+
 > - Plaintext: "HELLO"
 > - a: 5
 > - b: 8
-> - Ciphertext: "ZGWWA"
+> - Ciphertext: "RCLLA"
 
 > - Plaintext: "WORLD"
 > - a: 3
 > - b: 7
-> - Ciphertext: "JYXGA"
+> - Ciphertext: "VXGOQ"
 
 ### 4. Hill Cipher
 
 #### Exercise:
+
 Write a Python function `hill_cipher_encrypt(plaintext, key)` that takes a plaintext string and a 2x2 matrix key as input and returns the corresponding ciphertext using the Hill cipher.
 
 #### Example:
-> - Plaintext: "HELLO"
-> - Key: [[2, 3], [1, 4]]
-> - Ciphertext: "XZVZP"
 
-> - Plaintext: "WORLD"
-> - Key: [[5, 6], [7, 8]]
-> - Ciphertext: "ZVZVZ"
+> - Plaintext: "HELLOWORLD"
+> - Key: [[2, 3], [1, 4]]
+> - Ciphertext: "AXDDQYBEFX"
 
 ### 5. Permutation Cipher
 
 #### Exercise:
+
 Write a Python function `permutation_cipher_encrypt(plaintext, key)` that takes a plaintext string and a permutation key as input and returns the corresponding ciphertext using the permutation cipher.
 
 #### Example:
+
 > - Plaintext: "HELLO"
 > - Key: [3, 1, 4, 2, 5]
-> - Ciphertext: "LHEOL"
+> - Ciphertext: "LHLEO"
 
 > - Plaintext: "WORLD"
 > - Key: [2, 4, 1, 5, 3]
-> - Ciphertext: "OWRDL"
-
-### 6. LFSR Stream Cipher
-
-#### Exercise:
-Write a Python function `lfsr_cipher_encrypt(plaintext, seed, taps)` that takes a plaintext string, a seed value, and a list of tap positions as input and returns the corresponding ciphertext using the LFSR stream cipher.
-
-#### Example:
-> - Plaintext: "HELLO"
-> - Seed: "10101"
-> - Taps: [2, 4, 5]
-> - Ciphertext: "01110"
-
-> - Plaintext: "WORLD"
-> - Seed: "11010"
-> - Taps: [1, 3, 5]
-> - Ciphertext: "10011"
+> - Ciphertext: "OLWDR"
 
 ## Cryptanalysis Topics
 
@@ -211,12 +201,15 @@ Write a Python function `lfsr_cipher_encrypt(plaintext, seed, taps)` that takes 
 Write a Python function `break_affine_cipher(ciphertext)` that takes a string `ciphertext` as input and attempts to break the affine cipher by trying all possible combinations of `a` and `b` values. The function should return the most likely plaintext obtained by decrypting the ciphertext using the correct `a` and `b` values.
 
 Example:
+
 ```python
 ciphertext = "Czggj, Tqxxa!"
 plaintext = break_affine_cipher(ciphertext)
 print(plaintext)
 ```
+
 Output:
+
 ```
 Hello, World!
 ```
@@ -226,12 +219,15 @@ Hello, World!
 Write a Python function `break_substitution_cipher(ciphertext)` that takes a string `ciphertext` as input and attempts to break the substitution cipher by performing frequency analysis on the letters in the ciphertext. The function should return the most likely plaintext obtained by decrypting the ciphertext using the correct key.
 
 Example:
+
 ```python
 ciphertext = "XYZZA, CDCFA!"
 plaintext = break_substitution_cipher(ciphertext)
 print(plaintext)
 ```
+
 Output:
+
 ```
 Hello, World!
 ```
@@ -241,29 +237,16 @@ Hello, World!
 Write a Python function `break_hill_cipher(ciphertext, n)` that takes a string `ciphertext` and an integer `n` as input and attempts to break the Hill cipher by performing frequency analysis on the letters in the ciphertext and using matrix algebra. The function should return the most likely plaintext obtained by decrypting the ciphertext using the correct key.
 
 Example:
+
 ```python
 ciphertext = "XZGZJ, ZJGFA!"
 n = 2
 plaintext = break_hill_cipher(ciphertext, n)
 print(plaintext)
 ```
+
 Output:
-```
-Hello, World!
-```
 
-### 4. LFSR Stream Cipher
-
-Write a Python function `break_lfsr_stream_cipher(ciphertext, taps)` that takes a string `ciphertext` and a list of integers `taps` as input and attempts to break the LFSR stream cipher by performing a known-plaintext attack. The function should return the most likely plaintext obtained by decrypting the ciphertext using the correct taps.
-
-Example:
-```python
-ciphertext = "10101010101010101010"
-taps = [5, 3]
-plaintext = break_lfsr_stream_cipher(ciphertext, taps)
-print(plaintext)
-```
-Output:
 ```
 Hello, World!
 ```
