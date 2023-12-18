@@ -1,6 +1,7 @@
 Members:
 
 - Carlos Montiel (00200407) - 100%
+- Joel Del Castillo (00211456) - 100%
 - Juan Sanchez (00213868) - 100%
 - Camila Zambrano (00209260) - 100%
 
